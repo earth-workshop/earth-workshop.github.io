@@ -1,0 +1,230 @@
+/* General body styles */
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for a soft appearance */
+    color: #333; /* Dark grey text for better readability */
+}
+
+/* General Titles Style */
+h2 {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 600; /* Adjust the weight as needed, 600 for semi-bold */
+    color: #333; /* Optional: Sets the color of the titles if needed */
+    margin-bottom: 20px; /* Adjust spacing below the title as needed */
+}
+
+/* Specific adjustment for list items in case it's needed */
+ul {
+    padding-left: 20px; /* Adjust as needed to align with the rest of the content */
+}
+
+li {
+    text-align: left; /* Ensure list items are left-aligned */
+    list-style-position: inside; /* Positions the bullet inside the list item */
+}
+
+/* Custom navbar styles */
+.navbar {
+    background-color: #cee4f5 !important;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #555 !important; /* Soft black */
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Bootstrap primary color on hover */
+}
+
+/* Welcome Section */
+#welcome, .module {
+    padding: 4rem 0; /* Provide sufficient padding for each section */
+    text-align: center; /* Center-align the text for the welcome section */
+    background-color: #cee4f5  /* Soft blue background for the welcome section */
+}
+
+/* Module styles for alternating backgrounds */
+.module:nth-of-type(odd) {
+    background-color: #cee4f5   /* Light background for odd modules */
+}
+
+.module:nth-of-type(even) {
+    background-color: #ffffff; /* White background for even modules */
+}
+
+/* Adjustments for Important Dates to align content to the left and center in container */
+#important-dates, #news {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left;
+    margin: auto; /* Centers in the container if container has a specified width */
+    padding-left: 20px; /* Adjust as needed */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+/* Styling for list items in Important Dates and News to add dash */
+#important-dates p, #news p {
+    line-height: 1; /* 设置1.5倍行间距 */
+    position: relative;
+}
+
+/* Styling for list items in Important Dates and News to add dash */
+#important-dates h2, #news h2 {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 600; /* Adjust weight as needed */
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px; /* Add space between the title and content */
+}
+
+
+#important-dates p:before, #news p:before {
+    position: absolute;
+    left: -20px; /* Adjust based on actual padding */
+}
+
+.workshop-description {
+    text-align: left; /* 中心对齐文本 */
+    margin: 40px 0; /* 添加一些上下的边距 */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 2.2; /* 设置1.5倍行间距 */
+}
+.workshop-description h2 {
+    text-align: center; /* Centers the title */
+    font-size: 28px; /* Setting the title font size */
+    font-weight: 500; /* Adjust weight as needed */
+    margin-top: 70px;
+    margin-bottom: 20px; /* Add space between the title and content */
+    line-height: 2.2; /* 设置1.5倍行间距 */
+}
+.workshop-description p {
+    line-height: 2.2; /* 单独为段落设置行间距，保持一致性 */
+}
+
+/* Call for Papers Section adjustments */
+#call-for-papers {
+    justify-content: center; /* Center content vertically in case of extra space */ 
+    align-items: center; /* Center content horizontally */
+    font-family: 'Source Sans Pro', Arial, sans-serif; /* Ensuring the font family is applied */
+    text-align: left;
+    line-height: 2; 
+}
+
+#call-for-papers h2 {
+    text-align: center; /* Centers the title */
+    font-size: 28px; /* Setting the title font size */
+    font-weight: 600; /* Adjust weight as needed */
+    margin-bottom: 20px; /* Add space between the title and content */
+}
+
+#call-for-papers ul {
+    padding-left: 20px; /* Adjust as needed to align with the rest of the content */
+}
+
+#call-for-papers li {
+    list-style-position: inside; /* Positions the bullet inside the list item */
+}
+
+/* Organisation Section styles */
+#organisation img {
+    width: 150px; /* Fixed size for circular images */
+    height: 150px;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 1rem;
+}
+
+#organisation h3 {
+    color: #007bff; /* Use the Bootstrap primary color for names */
+}
+
+#organisation p {
+    color: #6c757d; /* Soft text color for descriptions */
+}
+
+#program h2 {
+    text-align: center; /* Centers the title */
+    font-size: 28px; /* Setting the title font size */
+    font-weight: 600; /* Adjust weight as needed */
+    margin-bottom: 20px; /* Add space between the title and content */
+}
+
+#submission {
+    background-color: #cee4f5;   /* Light background for odd modules */
+    text-align: left; /* 中心对齐文本 */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.5; /* 设置1.5倍行间距 */
+}
+
+/* Styling for list items in Important Dates and News to add dash */
+#submission p {
+    line-height: 1.5; /* 设置1.5倍行间距 */
+    position: relative;
+}
+
+/* Styling for list items in Important Dates and News to add dash */
+#submission h2 {
+    text-align: center; /* Centers the title */
+    font-weight: 600;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 28px; /* Setting the title font size */
+    margin-bottom: 20px; /* Add space between the title and content */
+    line-height: 1.5; /* 设置1.5倍行间距 */
+}
+
+#review-process {
+    background-color: #ffffff; /* White background for even modules */
+    text-align: left; /* 中心对齐文本 */
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 2.2; /* 设置1.5倍行间距 */
+}
+
+
+/* Styling for list items in Important Dates and News to add dash */
+#review-process h2 {
+    text-align: left; 
+    font-weight: 600;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 28px; /* Setting the title font size */
+    margin-bottom: 20px; /* Add space between the title and content */
+}
+
+#review-process ul {
+    padding-left: 20px; /* Adjust as needed to align with the rest of the content */
+}
+
+#review-process li {
+    list-style-position: inside; /* Positions the bullet inside the list item */
+}
+
+
+/* Footer or ScrollToTop Button styles */
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.scrollToTop:hover {
+    color: #0056b3; /* Darker shade on hover for contrast */
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
