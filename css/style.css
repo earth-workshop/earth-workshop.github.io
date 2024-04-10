@@ -26,7 +26,8 @@ li {
 
 /* Custom navbar styles */
 .navbar {
-    background-color: #cee4f5 !important;
+    width: 100%;
+    background-color: #cee4f5 !important
 }
 
 .navbar-brand img {
@@ -175,7 +176,7 @@ li {
     font-weight: 600;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 28px; /* Setting the title font size */
-    margin-bottom: 20px; /* Add space between the title and content */
+    margin-bottom: 30px; /* Add space between the title and content */
     line-height: 1.5; /* 设置1.5倍行间距 */
 }
 
@@ -193,7 +194,7 @@ li {
     font-weight: 600;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 28px; /* Setting the title font size */
-    margin-bottom: 20px; /* Add space between the title and content */
+    margin-bottom: 30px; /* Add space between the title and content */
 }
 
 #review-process ul {
