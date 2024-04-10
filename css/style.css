@@ -73,15 +73,50 @@ ul {
 
 /* Welcome Section */
 #welcome {
+    position: relative;
     padding: 4rem 0;
-    background-color: var(--secondary-color);
     min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: center;
+    background-image: url('../img/embody-ai.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+/* 仅应用于#welcome部分的h2标题样式 */
+#welcome h1 {
+    position: relative;
+    font-size: 40px;
+    font-family: 'Arial', sans-serif; /* 或者你偏好的sans-serif字体 */
+    color: #FFFFFF; /* 设置字体颜色为白色 */
+    z-index: 2;
     animation: fadeIn 2s ease-out;
+}
+
+/* 仅应用于#welcome部分的p段落样式 */
+#welcome p {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* 或者你偏好的sans-serif字体 */
+    color: #FFFFFF; /* 设置字体颜色为白色 */
+    z-index: 2;
+    animation: fadeIn 2s ease-out;
+}
+
+
+/* 保持背景的 ::before 伪元素 */
+#welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* 轻微的暗色遮罩，如果需要的话 */
+    z-index: 1;
 }
 
 /* Animations */
