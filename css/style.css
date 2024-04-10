@@ -71,7 +71,7 @@ li {
 
 /* Styling for list items in Important Dates and News to add dash */
 #important-dates p, #news p {
-    line-height: 1; /* 设置1.5倍行间距 */
+    line-height: 0.6;
     position: relative;
 }
 
