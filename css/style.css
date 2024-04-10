@@ -1,62 +1,102 @@
+:root {
+    --primary-color: #4CAF50; /* Main theme color - green */
+    --secondary-color: #8BC34A; /* Secondary theme color - light green */
+    --background-color: #F1F8E9; /* Background color - very light green */
+    --text-color: #333; /* Main text color */
+    --hover-color: #388E3C; /* Hover state color - dark green */
+}
 /* General body styles */
 body {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    background-color: #f4f4f4; /* Light grey background for a soft appearance */
-    color: #333; /* Dark grey text for better readability */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
 /* General Titles Style */
 h2 {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 28px;
-    font-weight: 600; /* Adjust the weight as needed, 600 for semi-bold */
-    color: #333; /* Optional: Sets the color of the titles if needed */
-    margin-bottom: 20px; /* Adjust spacing below the title as needed */
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
-/* Specific adjustment for list items in case it's needed */
+/* List items style */
 ul {
+    list-style-type: none;
     padding-left: 20px; /* Adjust as needed to align with the rest of the content */
 }
-
-li {
-    text-align: left; /* Ensure list items are left-aligned */
-    list-style-position: inside; /* Positions the bullet inside the list item */
+#call-for-papers li::before {
+    content: "• ";
+    color: var(--primary-color);
+    font-weight: bold;
 }
+
+#review-process li::before {
+    content: "• ";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 
 /* Custom navbar styles */
 .navbar {
     width: 100%;
-    background-color: #cee4f5 !important
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-brand img {
+    transition: transform 0.3s ease-in-out;
     max-height: 30px;
     margin-right: 10px;
 }
 
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
 .nav-link {
-    color: #555 !important; /* Soft black */
+    position: relative; /* 使得伪元素相对于它定位 */
+    width: 100%;
+    color: var(--text-color) !important;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
-    color: #007bff !important; /* Bootstrap primary color on hover */
+    color: var(--hover-color) !important;
 }
 
 /* Welcome Section */
-#welcome, .module {
-    padding: 4rem 0; /* Provide sufficient padding for each section */
-    text-align: center; /* Center-align the text for the welcome section */
-    background-color: #cee4f5  /* Soft blue background for the welcome section */
+#welcome {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Module styles for alternating backgrounds */
 .module:nth-of-type(odd) {
-    background-color: #cee4f5   /* Light background for odd modules */
-}
+    background-color: #ffffff;
+} 
 
 .module:nth-of-type(even) {
-    background-color: #ffffff; /* White background for even modules */
+    background-color: #ffffff;
 }
 
 /* Adjustments for Important Dates to align content to the left and center in container */
@@ -92,7 +132,7 @@ li {
 }
 
 .workshop-description {
-    text-align: left; /* 中心对齐文本 */
+    text-align: justify; /* 中心对齐文本 */
     margin: 40px 0; /* 添加一些上下的边距 */
     font-family: 'Source Sans Pro', Arial, sans-serif;
     line-height: 2.2; /* 设置1.5倍行间距 */
@@ -114,7 +154,7 @@ li {
     justify-content: center; /* Center content vertically in case of extra space */ 
     align-items: center; /* Center content horizontally */
     font-family: 'Source Sans Pro', Arial, sans-serif; /* Ensuring the font family is applied */
-    text-align: left;
+    text-align: justify;
     line-height: 2; 
 }
 
@@ -123,6 +163,7 @@ li {
     font-size: 28px; /* Setting the title font size */
     font-weight: 600; /* Adjust weight as needed */
     margin-bottom: 20px; /* Add space between the title and content */
+    margin-top: 60px; /* Add space between the title and content */
 }
 
 #call-for-papers ul {
@@ -140,10 +181,18 @@ li {
     object-fit: cover; /* Ensure images cover the area without distortion */
     border-radius: 50%; /* Circular images */
     margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 #organisation h3 {
-    color: #007bff; /* Use the Bootstrap primary color for names */
+    color: var(--primary-color);
+}
+
+#organisation img:hover {
+    transform: scale(1.1);
+}
+#organisation h2 {
+    text-align: center
 }
 
 #organisation p {
@@ -155,11 +204,17 @@ li {
     font-size: 28px; /* Setting the title font size */
     font-weight: 600; /* Adjust weight as needed */
     margin-bottom: 20px; /* Add space between the title and content */
+    margin-top: 60px; /* Add space between the title and content */
+}
+
+#program p {
+    text-align: center; /* Centers the title */
+    margin-bottom: 60px; /* Add space between the title and content */
 }
 
 #submission {
-    background-color: #cee4f5;   /* Light background for odd modules */
-    text-align: left; /* 中心对齐文本 */
+    /* background-color: #cee4f5;  */
+    text-align: justify; /* 中心对齐文本 */
     font-family: 'Source Sans Pro', Arial, sans-serif;
     line-height: 1.5; /* 设置1.5倍行间距 */
 }
@@ -172,17 +227,18 @@ li {
 
 /* Styling for list items in Important Dates and News to add dash */
 #submission h2 {
-    text-align: center; /* Centers the title */
+    text-align: left; /* Centers the title */
     font-weight: 600;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 28px; /* Setting the title font size */
     margin-bottom: 30px; /* Add space between the title and content */
+    margin-top: 60px; /* Add space between the title and content */
     line-height: 1.5; /* 设置1.5倍行间距 */
 }
 
 #review-process {
-    background-color: #ffffff; /* White background for even modules */
-    text-align: left; /* 中心对齐文本 */
+    /* background-color: #ffffff;  */
+    text-align: justify; /* 中心对齐文本 */
     font-family: 'Source Sans Pro', Arial, sans-serif;
     line-height: 2.2; /* 设置1.5倍行间距 */
 }
@@ -195,6 +251,7 @@ li {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     font-size: 28px; /* Setting the title font size */
     margin-bottom: 30px; /* Add space between the title and content */
+    margin-top: 60px; /* Add space between the title and content */
 }
 
 #review-process ul {
@@ -206,26 +263,26 @@ li {
 }
 
 
-/* Footer or ScrollToTop Button styles */
+/* Custom button styles */
+.custom-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* ScrollToTop Button styles */
 .scrollToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #007bff; /* Bootstrap primary color */
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .scrollToTop:hover {
-    color: #0056b3; /* Darker shade on hover for contrast */
+    color: var(--hover-color);
 }
-
-.custom-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-

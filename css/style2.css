@@ -1,0 +1,151 @@
+/* Root Variable Definitions */
+:root {
+    --primary-color: #4CAF50; /* Main theme color - green */
+    --secondary-color: #8BC34A; /* Secondary theme color - light green */
+    --background-color: #F1F8E9; /* Background color - very light green */
+    --text-color: #333; /* Main text color */
+    --hover-color: #388E3C; /* Hover state color - dark green */
+}
+
+/* General body styles */
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* General Titles Style */
+h2 {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+
+/* 在支持的浏览器中，为<p>标签添加微小的底部外边距以改善布局 */
+p:not(:last-child) {
+    margin-bottom: 1em;
+}
+/* Adjustments for all text to justify */
+p, ul, li, .module-content, #important-dates, #news, #call-for-papers, #organisation, #program, #submission, #review-process {
+    
+    hyphens: auto; /* 尝试自动使用连字符断字，使得对齐更自然 */
+}
+
+p::after, ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+/* Custom navbar styles */
+.navbar {
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--hover-color) !important;
+}
+
+/* Welcome Section */
+#welcome {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Custom button styles */
+.custom-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* ScrollToTop Button styles */
+.scrollToTop {
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.scrollToTop:hover {
+    color: var(--hover-color);
+}
+
+/* Module styles for alternating backgrounds and content alignment */
+.module {
+    padding: 4rem 0;
+
+    background-color: var(--background-color);
+}
+
+.module:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Organisation Section styles */
+#organisation img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#organisation img:hover {
+    transform: scale(1.1);
+}
+
+#organisation h3 {
+    color: var(--primary-color);
+}
+
+/* List items style */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: "• ";
+    color: var(--primary-color);
+    font-weight: bold;
+}
