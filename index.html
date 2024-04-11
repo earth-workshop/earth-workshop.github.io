@@ -17,14 +17,14 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#" style="margin-right: 80px; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 20px;"><img src="img/DeCaF-logo_black_small.png" alt="Logo"> EARTH</a>
+            <a class="navbar-brand" href="#" style="margin-right: 100px; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 20px;"><img src="img/DeCaF-logo_black_small.png" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" style="margin-left: 30px; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 16px;">
+                <ul class="navbar-nav" style="margin-left: 80px; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 16px;">
                     <li class="nav-item">
                         <a class="nav-link" href="#challenge"> Description</a>
                     </li>
@@ -257,26 +257,36 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 选择所有导航链接
+            // 导航栏链接滚动平滑过渡
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault(); // 阻止链接的默认跳转行为
-                    const href = this.getAttribute('href'); // 获取链接目标部分的ID
-                    const offsetTop = document.querySelector(href).offsetTop; // 获取目标部分的顶部偏移量
-        
-                    // 获取导航栏的高度
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    const offsetTop = document.querySelector(href).offsetTop;
                     const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        
-                    // 使用平滑滚动，并考虑导航栏的高度
                     window.scrollTo({
-                        top: offsetTop - navbarHeight, // 从目标部分的顶部偏移量中减去导航栏的高度
+                        top: offsetTop - navbarHeight,
                         behavior: "smooth"
                     });
                 });
             });
+
+            // 改变导航栏背景
+            const navbar = document.querySelector('.navbar');
+            const changeNavbarBackground = () => {
+                if (window.scrollY === 0) {
+                    navbar.classList.add('navbar-transparent');
+                } else {
+                    navbar.classList.remove('navbar-transparent');
+                    navbar.style.backgroundColor = ''; // 移除style属性，让CSS接管
+                }
+            };
+
+            changeNavbarBackground();
+            window.addEventListener('scroll', changeNavbarBackground);
         });
+
         </script>
         
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

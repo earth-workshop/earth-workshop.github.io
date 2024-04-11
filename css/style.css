@@ -1,6 +1,6 @@
 :root {
     --primary-color: #4CAF50; /* Main theme color - green */
-    --secondary-color: #8BC34A; /* Secondary theme color - light green */
+    --secondary-color: #92c755; /* Secondary theme color - light green */
     --background-color: #F1F8E9; /* Background color - very light green */
     --text-color: #333; /* Main text color */
     --hover-color: #388E3C; /* Hover state color - dark green */
@@ -62,7 +62,7 @@ ul {
 .nav-link {
     position: relative; /* 使得伪元素相对于它定位 */
     width: 100%;
-    color: var(--text-color) !important;
+    color: #ffffff !important;
     transition: color 0.3s ease-in-out;
     white-space: nowrap;
 }
@@ -70,6 +70,12 @@ ul {
 .nav-link:hover {
     color: var(--hover-color) !important;
 }
+
+.navbar.navbar-transparent {
+    background-color: transparent !important;
+}
+
+
 
 /* Welcome Section */
 #welcome {
@@ -125,7 +131,7 @@ ul {
     to { opacity: 1; }
 }
 
-/* Module styles for alternating backgrounds */
+Module styles for alternating backgrounds
 .module:nth-of-type(odd) {
     background-color: #ffffff;
 } 
