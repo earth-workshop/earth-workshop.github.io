@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4CAF50; /* Main theme color - green */
     --secondary-color: #92c755; /* Secondary theme color - light green */
-    --background-color: #F1F8E9; /* Background color - very light green */
+    --background-color: #ffffff; /* Background color - very light green */
     --text-color: #333; /* Main text color */
     --hover-color: #388E3C; /* Hover state color - dark green */
 }
